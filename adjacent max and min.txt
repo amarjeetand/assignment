@@ -1,0 +1,22 @@
+t = int(input())
+while(t>0):
+    n , m , x ,y = map(int , input().split())
+    sum = 0
+    if(y > 2*x):
+        y = 2*x
+    if(m%2 == 0):
+        sum = y * (m//2)
+        sum = sum * n
+    else:
+        k= m//2
+        j = n // 2
+        a =  (y * k) + x
+        b =  (y * k)+ (y-x)
+        if(n%2 == 0):
+            sum = a* j  + b* j
+        else:
+            sum = a*( j + 1) + b* j
+
+    print(sum)
+    t -= 1
+
